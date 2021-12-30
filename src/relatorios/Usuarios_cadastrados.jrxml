@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Usuarios_cadastrados" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="7ba48263-7326-4cd2-bcd2-43bf3f1c5f75">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString>
+		<![CDATA[select * from usuario;]]>
+	</queryString>
+	<field name="idusuario" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="usuario" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="senha" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="perfil" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="104" splitType="Stretch">
+			<staticText>
+				<reportElement x="145" y="34" width="249" height="45" uuid="ea493ecb-2ff7-4f34-8786-137d90ec22ed"/>
+				<textElement>
+					<font fontName="Comic Sans MS" size="28" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Todos os Usuários]]></text>
+			</staticText>
+			<textField pattern="dd/MM/yyyy">
+				<reportElement x="460" y="0" width="95" height="20" uuid="f7be832d-d11b-41c7-b575-72780510dc87"/>
+				<textElement>
+					<font fontName="Comic Sans MS" size="14" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<image>
+				<reportElement x="0" y="0" width="67" height="58" uuid="2e2648f2-affe-44e4-94e7-2c4fee6788c7"/>
+				<imageExpression><![CDATA["Z:\\RRI\\RRI - NEW - 2020\\Projeto_RRI\\src\\viewImagens\\Flora_azul_1.jpg"]]></imageExpression>
+			</image>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="4" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="30" splitType="Stretch">
+			<staticText>
+				<reportElement x="15" y="2" width="100" height="28" uuid="2dadfef3-0592-4de4-acb8-4546e12dcc8b"/>
+				<textElement>
+					<font fontName="Comic Sans MS" size="15" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Id]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="190" y="2" width="100" height="28" uuid="b0d37be5-844e-47a3-85a2-46a6a9289057"/>
+				<textElement>
+					<font fontName="Comic Sans MS" size="15" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Usuário]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="360" y="2" width="100" height="28" uuid="a67702b0-0988-4760-89c8-16431693741c"/>
+				<textElement>
+					<font fontName="Comic Sans MS" size="15" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Perfil]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="33" splitType="Stretch">
+			<textField>
+				<reportElement x="15" y="7" width="100" height="20" uuid="49c8236f-3fa5-40f6-9f85-4151ee6e83e7"/>
+				<textElement>
+					<font fontName="Comic Sans MS" size="11"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{idusuario}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="190" y="7" width="100" height="20" uuid="e47b3145-d980-4bcd-8456-a2a83984a7fe"/>
+				<textElement>
+					<font fontName="Comic Sans MS" size="11"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{usuario}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="360" y="7" width="100" height="20" uuid="22a6728a-a709-4796-b0cb-8c6de95f4990"/>
+				<textElement>
+					<font fontName="Comic Sans MS" size="11"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{perfil}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch">
+			<textField>
+				<reportElement x="415" y="32" width="80" height="20" uuid="2baf0e53-17de-43b6-95bf-6e9ceb06208f"/>
+				<textElement textAlignment="Right">
+					<font fontName="Comic Sans MS"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Page "+$V{PAGE_NUMBER}+" of"]]></textFieldExpression>
+			</textField>
+			<textField evaluationTime="Report">
+				<reportElement x="495" y="32" width="40" height="20" uuid="853b8440-b214-4142-8c0a-cab880e9ca23"/>
+				<textElement>
+					<font fontName="Comic Sans MS"/>
+				</textElement>
+				<textFieldExpression><![CDATA[" " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Entradas_realizadas" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="74486756-7382-4ba5-9969-92f7a7453be9">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString>
+		<![CDATA[select * from entrada;]]>
+	</queryString>
+	<field name="identrada" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="datarec" class="java.sql.Date">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="lotefor" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="nfe" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="fabricacao" class="java.sql.Date">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="validade" class="java.sql.Date">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="idproduto" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="classificacao" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="produto" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="nramostra" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="quantidade" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="dtamostragem" class="java.sql.Date">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="situacao" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="fornecedor" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="usuario" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch">
+			<staticText>
+				<reportElement x="148" y="7" width="265" height="55" uuid="08928f29-ee3f-4745-b135-f5b4a60cfbc2"/>
+				<textElement>
+					<font fontName="Comic Sans MS" size="28" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Todas as Entradas]]></text>
+			</staticText>
+			<textField pattern="dd/MM/yyyy">
+				<reportElement x="455" y="0" width="115" height="23" uuid="0b968786-8194-4d57-bfa2-82951fa73806"/>
+				<textElement>
+					<font fontName="Comic Sans MS" size="15" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<image>
+				<reportElement x="0" y="0" width="67" height="58" uuid="e840ccbb-fc50-469d-90bf-24cb8f710d95"/>
+				<imageExpression><![CDATA["Z:\\RRI\\RRI - NEW - 2020\\Projeto_RRI\\src\\viewImagens\\Flora_azul_1.jpg"]]></imageExpression>
+			</image>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="5" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="30" splitType="Stretch">
+			<staticText>
+				<reportElement x="5" y="4" width="39" height="20" uuid="5d654a3f-b8e8-4fbb-9cd3-8291d2a39742"/>
+				<textElement>
+					<font fontName="Comic Sans MS" size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[N°Ent]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="81" y="4" width="43" height="20" uuid="3fe04255-2dbc-4114-9e1d-be158cda438e"/>
+				<textElement>
+					<font fontName="Comic Sans MS" size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[lotefor]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="148" y="4" width="38" height="20" uuid="962d2708-cc3e-4854-8421-336a6cc69242"/>
+				<textElement>
+					<font fontName="Comic Sans MS" size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Nfe]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="216" y="4" width="55" height="20" uuid="563a0585-dbec-4bad-a0b9-316967470bb9"/>
+				<textElement>
+					<font fontName="Comic Sans MS" size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Produto]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="282" y="4" width="63" height="20" uuid="d2403a72-0345-42ef-a4e4-153cb1ff2b25"/>
+				<textElement>
+					<font fontName="Comic Sans MS" size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Fornecedor]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="358" y="4" width="55" height="20" uuid="502ff6ca-1291-43c4-8ada-62b130eae97b"/>
+				<textElement>
+					<font fontName="Comic Sans MS" size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[DtRec]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="423" y="4" width="52" height="20" uuid="75347e46-4de6-4453-848a-5ec68159e8b4"/>
+				<textElement>
+					<font fontName="Comic Sans MS" size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[DtAmost]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="489" y="4" width="58" height="20" uuid="838555b8-f550-45df-adf8-bd685de87ae7"/>
+				<textElement>
+					<font fontName="Comic Sans MS" size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Situacao]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="35" splitType="Stretch">
+			<textField>
+				<reportElement x="6" y="9" width="38" height="20" uuid="550a1e4e-0461-433b-a944-56a0a7be4752"/>
+				<textElement>
+					<font fontName="Comic Sans MS"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{identrada}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="81" y="9" width="43" height="20" uuid="4d99c024-4516-47f0-8930-f2266faba1a1"/>
+				<textElement>
+					<font fontName="Comic Sans MS"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{lotefor}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="148" y="9" width="38" height="20" uuid="5f7b82ea-53cf-4014-bff6-4d2936cffd80"/>
+				<textFieldExpression><![CDATA[$F{nfe}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="216" y="10" width="55" height="20" uuid="0bb9cf95-da1b-45f7-9826-c7ec2d077e79"/>
+				<textElement>
+					<font fontName="Comic Sans MS"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{produto}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="282" y="9" width="63" height="20" uuid="4d49a1ec-567a-4682-ac75-c4016e5b2dab"/>
+				<textElement>
+					<font fontName="Comic Sans MS"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{fornecedor}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="358" y="10" width="55" height="20" uuid="86e2c442-c62c-43db-81ad-b6fcd84a0bbc"/>
+				<textElement>
+					<font fontName="Comic Sans MS"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{datarec}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="423" y="9" width="52" height="20" uuid="5a73524d-d517-48f3-86f7-dcff44fec88d"/>
+				<textElement>
+					<font fontName="Comic Sans MS"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{dtamostragem}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="489" y="10" width="58" height="20" uuid="599e3ff8-2a8e-4165-8570-9f11bd5f4794"/>
+				<textElement>
+					<font fontName="Comic Sans MS"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{situacao}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch">
+			<textField>
+				<reportElement x="423" y="34" width="80" height="20" uuid="c95208b2-5ed6-485f-98be-327531a3ba32"/>
+				<textElement textAlignment="Right">
+					<font fontName="Comic Sans MS"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Page "+$V{PAGE_NUMBER}+" of"]]></textFieldExpression>
+			</textField>
+			<textField evaluationTime="Report">
+				<reportElement x="503" y="34" width="40" height="20" uuid="163a4eab-3afd-4f77-a6f4-1d0b26b6980f"/>
+				<textElement>
+					<font fontName="Comic Sans MS"/>
+				</textElement>
+				<textFieldExpression><![CDATA[" " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

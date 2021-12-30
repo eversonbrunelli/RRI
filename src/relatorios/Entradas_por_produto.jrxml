@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Entradas_por_produto" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="d490a951-f9f1-4cac-aff2-e6667fd8b573">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="idproduto" class="java.lang.String"/>
+	<queryString>
+		<![CDATA[SELECT
+     entrada.`identrada` AS entrada_identrada,
+     entrada.`datarec` AS entrada_datarec,
+     entrada.`lotefor` AS entrada_lotefor,
+     entrada.`produto` AS entrada_produto,
+     entrada.`nramostra` AS entrada_nramostra,
+     entrada.`quantidade` AS entrada_quantidade,
+     entrada.`situacao` AS entrada_situacao,
+     entrada.`fornecedor` AS entrada_fornecedor,
+     entrada.`coderp` AS entrada_coderp,
+     entrada.`aprovador` AS entrada_aprovador
+FROM
+     `entrada` entrada
+where entrada.idproduto = $P{idproduto}]]>
+	</queryString>
+	<field name="entrada_identrada" class="java.lang.Integer"/>
+	<field name="entrada_datarec" class="java.sql.Date"/>
+	<field name="entrada_lotefor" class="java.lang.String"/>
+	<field name="entrada_produto" class="java.lang.String"/>
+	<field name="entrada_nramostra" class="java.lang.Integer"/>
+	<field name="entrada_quantidade" class="java.lang.Float"/>
+	<field name="entrada_situacao" class="java.lang.String"/>
+	<field name="entrada_fornecedor" class="java.lang.String"/>
+	<field name="entrada_coderp" class="java.lang.String"/>
+	<field name="entrada_aprovador" class="java.lang.String"/>
+	<group name="entrada_identrada">
+		<groupExpression><![CDATA[$F{entrada_identrada}]]></groupExpression>
+	</group>
+	<title>
+		<band height="79" splitType="Stretch">
+			<image>
+				<reportElement x="0" y="0" width="67" height="58" uuid="6a8871c3-b5b6-4f67-87a7-275a5ed74490"/>
+				<imageExpression><![CDATA["Z:\\RRI\\RRI - NEW - 2020\\Projeto_RRI\\src\\viewImagens\\Flora_azul_1.jpg"]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement x="160" y="35" width="267" height="38" uuid="c967ecfa-4d0c-4f53-9c1a-e5fdd00b1745"/>
+				<textElement>
+					<font fontName="Comic Sans MS" size="24" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Entradas Por Produto]]></text>
+			</staticText>
+			<textField pattern="dd/MM/yyyy">
+				<reportElement x="455" y="0" width="100" height="20" uuid="d1a07057-7263-409d-bca2-b362fe9e9b31"/>
+				<textElement>
+					<font fontName="Comic Sans MS" size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+		</band>
+	</title>
+	<columnHeader>
+		<band height="69" splitType="Stretch">
+			<staticText>
+				<reportElement x="498" y="48" width="57" height="20" uuid="aabe7dc9-ed8b-4d46-a45a-69b75942d83b"/>
+				<textElement>
+					<font fontName="Comic Sans MS" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Situação]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="436" y="49" width="55" height="20" uuid="6177a9d1-b283-430d-8dd8-1fb4ebbb34f7"/>
+				<textElement>
+					<font fontName="Comic Sans MS" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Aprovador]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="322" y="49" width="52" height="19" uuid="5deab4af-ebad-4f11-abba-d565a8d49e74"/>
+				<textElement>
+					<font fontName="Comic Sans MS" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Cod Erp]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="260" y="49" width="60" height="20" uuid="abe93c8f-2015-4c08-a684-0b047e901b5d"/>
+				<textElement>
+					<font fontName="Comic Sans MS" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Fornecedor]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="49" width="25" height="20" uuid="3239883c-e8bc-4465-af96-89c9be29903c"/>
+				<textElement>
+					<font fontName="Comic Sans MS" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Ent]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="200" y="49" width="55" height="20" uuid="1ec16863-1932-42b4-a954-dcecb304ac22"/>
+				<textElement>
+					<font fontName="Comic Sans MS" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Produto]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="148" y="49" width="37" height="20" uuid="0d54e786-1657-4089-8463-52a0f6c7e7b8"/>
+				<textElement>
+					<font fontName="Comic Sans MS" isBold="true"/>
+				</textElement>
+				<text><![CDATA[N°Amo]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="35" y="49" width="42" height="20" uuid="f1d8eb75-d825-4874-ace6-68da4f2edc40"/>
+				<textElement>
+					<font fontName="Comic Sans MS" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Dt Rec]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="375" y="49" width="58" height="20" uuid="9eca044f-c26e-417e-a925-120719e6c4b6"/>
+				<textElement>
+					<font fontName="Comic Sans MS" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Quantidade]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="88" y="49" width="52" height="20" uuid="cdba8fc2-94b9-4a84-b3a8-90ba334d63a4"/>
+				<textElement>
+					<font fontName="Comic Sans MS" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Lote For]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="23" splitType="Stretch">
+			<textField>
+				<reportElement x="379" y="1" width="47" height="18" uuid="f7f2fb0e-4df0-44d7-acca-4e68455a2132"/>
+				<textFieldExpression><![CDATA[$F{entrada_quantidade}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="322" y="2" width="55" height="19" uuid="1935e978-77b8-4fce-8e91-86e38b83efbc"/>
+				<textFieldExpression><![CDATA[$F{entrada_coderp}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="259" y="1" width="55" height="20" uuid="6ca26786-f3e4-4307-9dd6-02740db2ce76"/>
+				<textFieldExpression><![CDATA[$F{entrada_fornecedor}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="1" y="2" width="25" height="21" uuid="ce621ebc-b36f-477b-bd5c-718d08dd29cc"/>
+				<textFieldExpression><![CDATA[$F{entrada_identrada}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="496" y="0" width="57" height="20" uuid="a3d39d2c-7143-4d91-a4e6-b9a739900b57"/>
+				<textFieldExpression><![CDATA[$F{entrada_situacao}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="435" y="2" width="59" height="18" uuid="0fd6b95e-9201-4e5c-8cdd-ad9059049d36"/>
+				<textFieldExpression><![CDATA[$F{entrada_aprovador}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="195" y="0" width="55" height="20" uuid="a386668e-edfd-4ca2-8a6f-386d7e4ae62c"/>
+				<textFieldExpression><![CDATA[$F{entrada_produto}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="86" y="2" width="52" height="20" uuid="2d95d14d-f745-4c28-b52e-54c9a61487d5"/>
+				<textFieldExpression><![CDATA[$F{entrada_lotefor}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="149" y="2" width="32" height="20" uuid="15e7ff8a-0af8-45ea-aaf9-2a102a08eac4"/>
+				<textFieldExpression><![CDATA[$F{entrada_nramostra}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="33" y="2" width="42" height="20" uuid="923f8180-1064-4e4e-92e5-f21ddd7d9543"/>
+				<textFieldExpression><![CDATA[$F{entrada_datarec}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+</jasperReport>
