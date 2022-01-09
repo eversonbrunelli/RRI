@@ -75,11 +75,11 @@ public class TelaAprovacao extends javax.swing.JFrame {
     //Método para envio de email de confirmação de aprovação
     private void envia_email_aprovado() {
 
-        String meuEmail = "rri@fit.flora.com.br";
-        String minhaSenha = "tKu2D6xDF78d";
+        String meuEmail = "email@email";
+        String minhaSenha = "senha";
 
         SimpleEmail email = new SimpleEmail();
-        email.setHostName("correio.flora.com.br");
+        email.setHostName("servidor@email");
         email.setSslSmtpPort("465");
         email.setAuthenticator(new DefaultAuthenticator(meuEmail, minhaSenha));
         email.setSSLOnConnect(true);
@@ -92,7 +92,7 @@ public class TelaAprovacao extends javax.swing.JFrame {
             email.setFrom(meuEmail);
             email.setSubject("Entrada Aprovada");
             email.setMsg(entrada);
-            email.addTo("itajai.rri@fit.flora.com.br");
+            email.addTo("lista@email");
             email.send();
             JOptionPane.showMessageDialog(null, "Email de confirmação enviado!");
 
@@ -104,11 +104,11 @@ public class TelaAprovacao extends javax.swing.JFrame {
     //Método para envio de email de confirmação de aprovação
     private void envia_email_reprovado() {
 
-        String meuEmail = "rri@fit.flora.com.br";
-        String minhaSenha = "tKu2D6xDF78d";
+        String meuEmail = "email@email";
+        String minhaSenha = "senha";
 
         SimpleEmail email = new SimpleEmail();
-        email.setHostName("correio.flora.com.br");
+        email.setHostName("servidor@email");
         email.setSslSmtpPort("465");
         email.setAuthenticator(new DefaultAuthenticator(meuEmail, minhaSenha));
         email.setSSLOnConnect(true);
@@ -121,7 +121,7 @@ public class TelaAprovacao extends javax.swing.JFrame {
             email.setFrom(meuEmail);
             email.setSubject("Entrada Reprovada");
             email.setMsg(entrada);
-            email.addTo("itajai.rri@fit.flora.com.br");
+            email.addTo("lista@email");
             email.send();
             JOptionPane.showMessageDialog(null, "Email de confirmação enviado!");
 
@@ -133,11 +133,11 @@ public class TelaAprovacao extends javax.swing.JFrame {
     //Método para envio de email de confirmação de aprovação
     private void envia_email_aprovado_concessao() {
 
-        String meuEmail = "rri@fit.flora.com.br";
-        String minhaSenha = "tKu2D6xDF78d";
+        String meuEmail = "email@email";
+        String minhaSenha = "senha";
 
         SimpleEmail email = new SimpleEmail();
-        email.setHostName("correio.flora.com.br");
+        email.setHostName("servidor@email");
         email.setSslSmtpPort("465");
         email.setAuthenticator(new DefaultAuthenticator(meuEmail, minhaSenha));
         email.setSSLOnConnect(true);
@@ -150,7 +150,7 @@ public class TelaAprovacao extends javax.swing.JFrame {
             email.setFrom(meuEmail);
             email.setSubject("Entrada Aprovada por Concessão");
             email.setMsg(entrada);
-            email.addTo("itajai.rri@fit.flora.com.br");
+            email.addTo("lista@email");
             email.send();
             JOptionPane.showMessageDialog(null, "Email de confirmação enviado!");
 

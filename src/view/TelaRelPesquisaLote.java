@@ -110,7 +110,7 @@ public class TelaRelPesquisaLote extends javax.swing.JFrame {
                 filtro.put("lotefor", (jTextFieldLoteFor.getText()));
 
                 //usando a classe Jasperprint para preparar a impressão    
-                JasperPrint imprime = JasperFillManager.fillReport("\\\\fitnt\\Compartilhado\\RRI\\RRI - NEW - 2020\\Projeto_RRI\\src\\relatorios\\Entradas_por_lote.jasper", filtro, conexao);
+                JasperPrint imprime = JasperFillManager.fillReport("caminho do relatorio", filtro, conexao);
                 //A linha abaixo exibe o relatório através da classe JasperVieWer
                 JasperViewer.viewReport(imprime, false);
 
