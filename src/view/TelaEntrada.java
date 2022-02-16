@@ -217,7 +217,7 @@ public class TelaEntrada extends javax.swing.JFrame {
                                         Integer.parseInt(identrada));
 
                                 //usando a classe Jasperprint para preparar a impressão    
-                                JasperPrint imprime = JasperFillManager.fillReport("\\\\fitnt\\Compartilhado\\RRI\\RRI - NEW - 2020\\Projeto_RRI\\src\\relatorios\\Imprime_Entrada.jasper", filtro, conexao);
+                                JasperPrint imprime = JasperFillManager.fillReport("\\\\URLdoRelatorio.jasper", filtro, conexao);
                                 //A linha abaixo exibe o relatório através da classe JasperVieWer
                                 JasperViewer.viewReport(imprime, false);
 
@@ -453,7 +453,7 @@ public class TelaEntrada extends javax.swing.JFrame {
                         Integer.parseInt(jTextFieldNrEntrada.getText()));
 
                 //usando a classe Jasperprint para preparar a impressão    
-                JasperPrint imprime = JasperFillManager.fillReport("\\\\fitnt\\Compartilhado\\RRI\\RRI - NEW - 2020\\Projeto_RRI\\src\\relatorios\\Imprime_Entrada.jasper", filtro, conexao);
+                JasperPrint imprime = JasperFillManager.fillReport("\\\\URLdo Relatorio.jasper", filtro, conexao);
                 //A linha abaixo exibe o relatório através da classe JasperVieWer
                 JasperViewer.viewReport(imprime, false);
 
